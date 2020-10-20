@@ -20,7 +20,7 @@ function Play(opts){
   this.urlRegex      = /^(https?|ftp):\/\/[^\s\/$.?#].[^\s]*$/i
   // Regex by @stephenhay from https://mathiasbynens.be/demo/url-regex
 
-  this.play = function(what, options, next){
+  this.play = (what, options, next) => {
     next  = next || function(){}
     next  = typeof options === 'function' ? options : next
     options = typeof options === 'object' ? options : {}
